@@ -32,9 +32,6 @@ npm run start
  ┃ ┣ pages - big page components
  ┃ ┣ layout - reuzable layout in page
  ┃ ┣ styles - for css or scss files 
- 
-
-
 ```
 
 ## Project Structure
