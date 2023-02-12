@@ -20,6 +20,23 @@ change directory to frontend and run project:
 cd frontend
 npm run start
 ```
+## FrontEnd architecture
+
+```
+📂frontend
+ ┣ 📂src - you can add the folders you need, for example:
+ ┃ ┣ components - have all reusable component(element)
+ ┃ ┣ shared - little components for using our app
+ ┃ ┣ util - simple helpers functions
+ ┃ ┣ interfaces/models/types - for TS typization
+ ┃ ┣ pages - big page components
+ ┃ ┣ layout - reuzable layout in page
+ ┃ ┣ styles - for css or scss files 
+ 
+
+
+```
+
 ## Project Structure
 
 ```
