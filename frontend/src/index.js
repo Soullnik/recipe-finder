@@ -3,5 +3,8 @@ const call = async () => {
     console.log(response)
     const data = await response.json()
     console.log(data)
+    data.forEach((item) => {
+        document.querySelector('#root').append(item.id, item.login)
+    })
 }
 call()
