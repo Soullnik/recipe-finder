@@ -8,16 +8,14 @@
 
 ### development is in the develop branch
 
-## Common instruction (Step 1 for All)
-for run project need to install [Docker](https://docs.docker.com/desktop/install/windows-install/) 
-and run:
-````
-docker compose up -d 
-````
-## FrontEnd instruction (Step 2 only frontEnd)
-change directory to frontend and run project:
+## Common instruction (for All)
+
+for run project need to install [Docker](https://docs.docker.com/desktop/install/windows-install/) and change directory to frontend and run project:
 ```
+checkout develop
+docker compose up -d 
 cd frontend
+npm install
 npm run start
 ```
 ## FrontEnd architecture
