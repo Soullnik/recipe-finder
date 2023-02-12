@@ -2,7 +2,7 @@
 
 
 ## Main information
-- PWA web application
+- SPA web application
 - backend with Rust, PostgreSQL
 - frontend JS,webpack,
 
