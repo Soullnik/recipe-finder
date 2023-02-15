@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        // "rootDir": "./src",
+        "moduleResolution": "node",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": "./",
+        "types": ["node", "jest"],
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "outDir": "./build/",
+        "removeComments": true,
+        "noEmitOnError": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": [".", "src/jest.config.ts"],
+    "exclude": ["./build"]
+}
+
+// "outDir": "./build/",
+// "sourceMap": true,
+// "forceConsistentCasingInFileNames": true,
+// "strict": true,
+// "noImplicitAny": true,
+// "module": "commonjs",
+// "target": "es5",
+// "jsx": "react",
+// "allowJs": true,
+// "moduleResolution": "node"
