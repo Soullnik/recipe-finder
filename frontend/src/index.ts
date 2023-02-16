@@ -1,9 +1,3 @@
-export const sum = (a: number, b: number) => a + b;
-
-// export const result = (str:any) => {
-//     if (typeof str==="string") {
-//       return "*".repeat(str.length)
-//     } else {
-//         return "not string"
-//     }
-// }
+export function sum(a: number, b: number): number {
+  return a + b;
+}

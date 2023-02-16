@@ -1,11 +1,13 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: {
-    main: path.resolve(__dirname, "./src/index.js"),
-  },
+  entry: './src/index.ts',
+  mode: 'development',
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   module: {
     rules: [
       {
@@ -15,28 +17,23 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    port: 3000,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
-  },
-  mode: "development",
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "build"),
-  },
-  devServer: {
-    port: 3000,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    },
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "RecipeFinder",
-      template: path.resolve(__dirname, "./index.html"),
+      title: 'RecipeFinder',
+      template: path.resolve(__dirname, './index.html'),
     }),
   ],
 };
