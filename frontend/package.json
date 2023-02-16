@@ -4,8 +4,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "jest",
-    "lint": "eslint . --ext .js,.ts",
+    "test:watch": "jest --watchAll --setupFilesAfterEnv ./src/__tests__/setup.js",
+    "test": "jest --setupFilesAfterEnv ./src/__tests__/setup.js",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "lint:fix": "eslint . --ext .ts --ext .tsx --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "start": "webpack serve",
@@ -13,6 +15,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
@@ -20,6 +23,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.4.3",
+    "jsdom": "^21.1.0",
     "prettier": "^2.8.4",
     "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",

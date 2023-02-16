@@ -5,9 +5,6 @@ module.exports = {
   entry: './src/index.ts',
   mode: 'development',
   devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-  },
   module: {
     rules: [
       {
@@ -24,7 +21,7 @@ module.exports = {
     },
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
