@@ -1,9 +1,9 @@
-interface BasicPropsFn {
+interface BasicPropsFn<T> {
   tag: string;
   classList: string[];
   id: string;
   children: HTMLElement[] | string[];
-  events?: Record<string, (event: any)=> void>
+  events?: Record<string, (event: T | any)=> void>
 }
 
 interface BasicPropsClass {
@@ -14,13 +14,13 @@ interface BasicPropsClass {
   events?: Record<string, ()=> void>
 }
 
-export const createComponent = ({
+export const createComponent = <T>({
   tag,
   classList,
   id,
   children,
   events
-}: BasicPropsFn): HTMLElement => {
+}: BasicPropsFn<T>): HTMLElement => {
   const element = document.createElement(tag);
   element.classList.add(...classList);
   element.id = id;

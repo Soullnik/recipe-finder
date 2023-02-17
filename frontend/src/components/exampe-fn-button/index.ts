@@ -7,7 +7,7 @@ export const button = (click: () => void) => {
         event?.target?.classList.toggle('hover')
     }
 
-  return createComponent({
+  return createComponent<MouseEvent>({
     tag: 'button',
     id: '',
     classList: ['example-button', 'fn-button'],
