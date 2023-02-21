@@ -1,9 +1,9 @@
-import createCheckBox from './components/checkbox/checkbox';
+import СheckBox from './components/checkbox/checkbox';
 
 export function sum(a: number, b: number): HTMLElement {
   return document.createElement('div');
 }
+
 const rooting = document.querySelector('#root');
-if (rooting) {
-  createCheckBox('123', 1, ['123'], rooting);
-}
+const resept = new СheckBox('123', 3, ['123', '123', '123'], rooting);
+console.log(resept);
