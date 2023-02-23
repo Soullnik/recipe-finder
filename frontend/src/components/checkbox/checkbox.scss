@@ -1,0 +1,9 @@
+.check_wrapper{
+    &__title{
+        text-align: center;    
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;    
+    }   
+}
