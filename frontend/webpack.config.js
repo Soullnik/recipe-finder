@@ -23,6 +23,7 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    open: true,
   },
   resolve: {
     extensions: ['.ts', '.js'],
