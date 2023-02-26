@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
