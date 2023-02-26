@@ -1,3 +1,5 @@
+import './checkbox.scss';
+
 class СheckBox {
   title: string;
 
