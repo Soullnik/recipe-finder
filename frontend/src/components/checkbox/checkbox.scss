@@ -1,10 +1,10 @@
 .check_wrapper{
+    background: #000
     &__title{
         text-align: center;    
     }
     &__body{
         display: flex;
         flex-direction: column;     
-    }    
-    
+    }     
 }
