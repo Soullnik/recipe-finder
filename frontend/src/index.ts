@@ -4,8 +4,19 @@ export function sum(a: number, b: number): HTMLElement {
   return document.createElement('div');
 }
 
-const rooting = document.querySelector('#root');
-const resept = new СheckBox('123', 3, ['123', '123', '123']);
-if (rooting) {
-  resept.create(rooting);
+const root = document.querySelector('#root');
+const resept1 = new СheckBox(
+  'Макароны по флотски',
+  ['Макароны', 'Фарш', 'Специи'],
+  1
+);
+const resept2 = new СheckBox(
+  'Мясо по французски',
+  ['Филе', 'Сыр', 'Помидор', 'Майонез', 'Специи'],
+  2
+);
+
+if (root) {
+  resept1.create(root);
+  resept2.create(root);
 }
