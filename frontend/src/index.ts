@@ -16,4 +16,6 @@ if (root) {
 console.log('herhwrwrwr') //dfsfsf
 'sfsf'
 "sfsfsf"
+let sfsfsfsf = "LOL"
 //herwrwrwrwrwr
+/* lol */
