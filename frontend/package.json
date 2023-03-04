@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "main": "index.js",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:commit && npm run prettier:commit"
-    }
-  },
   "scripts": {
     "test:watch": "jest --watchAll --setupFilesAfterEnv ./src/__tests__/setup.js",
     "test": "jest --setupFilesAfterEnv ./src/__tests__/setup.js",
@@ -44,5 +39,10 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:commit && npm run prettier:commit"
+    }
   }
 }
