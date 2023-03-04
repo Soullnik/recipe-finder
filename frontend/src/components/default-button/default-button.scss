@@ -1,0 +1,29 @@
+.default-button {
+  width: fit-content;
+  border: 0;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  &_pink {
+    color: white;
+    background: linear-gradient(90deg, #E61E4F -0.65%, #D70764 100%);
+    &:hover{
+        background:linear-gradient(90deg, #D70764 -0.65%, #E61E4F 100%);
+    }
+  }
+  &_white {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    &:hover{
+        background: #DFDFDF;
+    }
+  }
+}
