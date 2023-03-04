@@ -12,3 +12,6 @@ if (root) {
   checkbox.create(root);
   // input1.focus();
 }
+
+
+console.log('test'); //sfsfsfsf
