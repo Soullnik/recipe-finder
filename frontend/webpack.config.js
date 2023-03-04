@@ -16,6 +16,17 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8 * 1024,
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {

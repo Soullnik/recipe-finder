@@ -1,5 +1,4 @@
 import './checkbox.scss';
-
 //              Ояъвление элемента
 // title: загаловок;
 // arr: массив с перечеслением боксов по очереди
@@ -7,7 +6,6 @@ import './checkbox.scss';
 
 //        Создание элемента методом create(append)
 // append: внутрь чего вложить структуру (в коннец)
-
 class СheckBox {
   title: string;
 
