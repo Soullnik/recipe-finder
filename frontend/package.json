@@ -5,7 +5,7 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix && npm run prettier:fix"
+      "pre-commit": "npm run lint:commit && npm run prettier:commit"
     }
   },
   "scripts": {
@@ -15,6 +15,8 @@
     "lint:fix": "eslint . --ext .ts --ext .tsx --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "lint:commit": "eslint --fix src",
+    "prettier:commit": "prettier --write \"src/**/*.{ts,tsx}\"",
     "start": "webpack serve",
     "build": "webpack --mode production"
   },
