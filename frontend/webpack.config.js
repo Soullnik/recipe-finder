@@ -14,12 +14,8 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
-      }
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   devServer: {
@@ -27,6 +23,7 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    open: true,
   },
   resolve: {
     extensions: ['.ts', '.js'],
