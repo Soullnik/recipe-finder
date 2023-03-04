@@ -13,5 +13,3 @@ if (root) {
   // input1.focus();
 }
 
-
-console.log('test'); //sfsfsfsf
