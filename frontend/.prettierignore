@@ -4,3 +4,13 @@ dist/
 package-lock.json
 .nginx
 .vscode
+package.json 
+jest.config.js
+index.html
+globals.d.ts
+.prettierrc.js
+.eslintrc.js
+tsconfig.eslint.json
+tsconfig.json
+webpack.config.js
+setup.js
