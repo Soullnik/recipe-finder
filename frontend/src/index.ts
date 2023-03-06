@@ -1,3 +1,4 @@
+import getSwitchButton from './components/switch-buttom/switch-button';
 import СheckBox from './components/checkbox/checkbox';
 import Input from './components/input/input';
 
@@ -10,5 +11,6 @@ if (root) {
   input1.create(root);
   input2.create(root, 'Необязательно');
   checkbox.create(root);
+  root.append(getSwitchButton());
   // input1.focus();
 }
