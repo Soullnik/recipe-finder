@@ -22,19 +22,19 @@ class Input {
 
     const container = document.createElement('label');
     const containerBody = document.createElement('div');
-    container.classList.add(`input`);
-    containerBody.classList.add(`input__body`);
+    container.classList.add('input');
+    containerBody.classList.add('input__body');
     append.append(container);
     if (title) {
       const containerTitle = document.createElement('div');
       containerTitle.textContent = `${title || ''}`;
-      containerTitle.classList.add(`input__title`);
+      containerTitle.classList.add('input__title');
       container.append(containerTitle);
       container.style.cssText = 'justify-content:flex-end';
     }
     container.append(containerBody);
     containerBody.append(this.element);
-    this.element.classList.add(`input__input_element`);
+    this.element.classList.add('input__input_element');
 
     container.addEventListener('focusin', () => {
       container.classList.add('border_2px');

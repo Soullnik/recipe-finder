@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 module.exports = {
@@ -10,7 +8,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
@@ -20,14 +18,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|png|gif|svg)/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8 * 1024,
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },
@@ -44,6 +35,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
