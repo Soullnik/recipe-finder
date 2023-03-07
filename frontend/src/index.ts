@@ -5,6 +5,7 @@ import {
 import getSwitchButton from './components/switch-buttom/switch-button';
 import СheckBox from './components/checkbox/checkbox';
 import Input from './components/input/input';
+import userService from './services/user.service';
 
 
 const root: HTMLElement | null = document.getElementById('root');
@@ -13,7 +14,7 @@ const App = () => {
 const input1 = new Input('text', '231', 'Адрес');
 const input2 = new Input('text', '132', 'Паспортные данные');
 const checkbox = new СheckBox('sex', ['male', 'female'], 1);
-  const dropDown = new Dropdown();
+  const dropDown = new Dropdown(userService);
   const select = new Select([
     'Сообщения',
     'Уведомления',
