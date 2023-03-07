@@ -9,6 +9,8 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["src", "globals.d.ts"],
-  "exclude": ["node_modules", "dist", "babel.config.js"]
+  "include": [
+    "src/**/*",
+    "globals.d.ts"
+  ]
 }

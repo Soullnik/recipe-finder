@@ -1,0 +1,35 @@
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.card-link__block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:324px ;
+    height:172px ;
+    padding: 0px 8px 0px 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 4px #D8D8D8;
+}
+.card-link{
+    cursor: pointer;
+}
+.card-link__personimg{
+    width: 32px;
+    height: 32px;
+}
+.card-link__information{
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+    font-weight: 600;
+}
+.card-link__action{
+    font-size: 14px;
+    line-height: 18px ;
+    color: #717171;
+    font-weight: 400;
+}
