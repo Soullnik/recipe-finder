@@ -8,27 +8,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: "/assets/[name].[ext]"
-          },
-        ],
-      }
+        test: /\.(jpg|jpeg|png|gif|svg)/i,
+        type: 'asset/resource',
+      },
     ],
   },
   devServer: {
@@ -36,6 +27,7 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    open: true,
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -43,6 +35,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({

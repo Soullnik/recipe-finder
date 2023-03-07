@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es6",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "noImplicitAny": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "sourceMap": true
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*",

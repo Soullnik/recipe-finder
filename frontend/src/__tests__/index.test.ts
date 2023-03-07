@@ -1,8 +1,7 @@
-import { sum } from '../index'; 
+import СheckBox from '../components/checkbox/checkbox';
 
-describe('sum', () => {
-  it('adds two numbers', () => {
-    const div: HTMLElement = sum(1, 2);
-    expect(div.innerText).toBe(undefined);
-  });
+describe('test', () => {
+  const checkBox = new СheckBox('sex', ['male', 'female'], 1);
+
+  expect(checkBox).toBeDefined();
 });
