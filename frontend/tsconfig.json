@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es6",
-    "lib": ["es6", "dom"],
+    "noImplicitAny": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "sourceMap": true
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["src", "globals.d.ts"],
+  "exclude": ["node_modules", "dist", "babel.config.js"]
 }
