@@ -1,7 +1,0 @@
-{
-  "preset": "ts-jest",
-  "testEnvironment": "jest-environment-jsdom",
-  "bail": 1,
-  "verbose": true,
-  "setupFilesAfterEnv": ["<rootDir>/setup.js"]
-}
