@@ -9,6 +9,7 @@ const getSwitchButton = () => {
   const divOk: HTMLDivElement = document.createElement('div');
   divOk.classList.add('ok');
   divToggleBtn.append(divOk);
+
   divToggle.append(divToggleBtn);
 
   divToggle.addEventListener('click', () => {
