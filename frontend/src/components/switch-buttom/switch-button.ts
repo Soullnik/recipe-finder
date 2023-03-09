@@ -12,7 +12,6 @@ const getSwitchButton = () => {
 
   divToggle.append(divToggleBtn);
 
-
   divToggle.addEventListener('click', () => {
     divToggle.classList.toggle('active');
   });

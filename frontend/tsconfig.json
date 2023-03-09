@@ -6,8 +6,15 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true
   },
-  "include": ["src", "globals.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src",
+    "globals.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
