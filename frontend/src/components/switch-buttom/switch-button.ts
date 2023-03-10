@@ -8,7 +8,7 @@ const getSwitchButton = () => {
   divToggleBtn.classList.add('toggle-button');
   const divOk: HTMLDivElement = document.createElement('div');
   divOk.classList.add('ok');
-  divToggleBtn.append(divOk)
+  divToggleBtn.append(divOk);
 
   divToggle.append(divToggleBtn);
 
