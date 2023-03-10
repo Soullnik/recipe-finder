@@ -4,7 +4,7 @@ import './dropdown-menu-style.scss';
 export class Dropdown extends Component {
   count: HTMLElement;
 
-  constructor(private userService:UserService) {
+  constructor(private userService: UserService) {
     super('button', 'dropdown');
     this.parent.addEventListener('click', () => {
       const selectList = document.querySelector('.select__list');
@@ -19,7 +19,11 @@ export class Dropdown extends Component {
   createDropDown() {
     this.parent.append(
       new Component('img', 'dropdown__burger', 'введите src').getElement(),
-      new Component('img', 'dropdown__avatar', this.userService.getAvatar()).getElement(),
+      new Component(
+        'img',
+        'dropdown__avatar',
+        this.userService.getAvatar()
+      ).getElement(),
       this.count
     );
   }
