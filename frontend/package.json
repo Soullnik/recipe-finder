@@ -12,8 +12,8 @@
     "build": "webpack --mode production"
   },
   "lint-staged": {
-    "*": [
-      "npm run lint:fix"
+    "src/**/*.ts": [
+      "eslint --fix"
     ]
   },
   "devDependencies": {
