@@ -7,13 +7,12 @@ import СheckBox from './components/checkbox/checkbox';
 import Input from './components/input/input';
 import userService from './services/user.service';
 
-
 const root: HTMLElement | null = document.getElementById('root');
 
 const App = () => {
-const input1 = new Input('text', '231', 'Адрес');
-const input2 = new Input('text', '132', 'Паспортные данные');
-const checkbox = new СheckBox('sex', ['male', 'female'], 1);
+  const input1 = new Input('text', '231', 'Адрес');
+  const input2 = new Input('text', '132', 'Паспортные данные');
+  const checkbox = new СheckBox('sex', ['male', 'female'], 1);
   const dropDown = new Dropdown(userService);
   const select = new Select([
     'Сообщения',
@@ -32,7 +31,3 @@ const checkbox = new СheckBox('sex', ['male', 'female'], 1);
   root?.append(dropDown.getElement(), select.getElement());
 };
 App();
-
-
-
-
