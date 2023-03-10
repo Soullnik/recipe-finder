@@ -5,7 +5,7 @@ class Component {
     this.parent = document.createElement(tagName);
     this.parent.classList.add(className);
     if (src) {
-      this.parent.src = src
+      this.parent.src = src;
     }
   }
 
