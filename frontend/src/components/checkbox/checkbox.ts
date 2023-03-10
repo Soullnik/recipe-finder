@@ -19,7 +19,7 @@ class СheckBox {
     this.title = title;
     this.arr = arr;
 
-    this.columns = columns
+    this.columns = columns;
   }
 
   create(append: Element) {
