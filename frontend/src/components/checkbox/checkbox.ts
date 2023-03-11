@@ -11,7 +11,7 @@ import './checkbox.scss';
 class СheckBox {
   title: string;
 
-  arr: string[];
+  arr: string[]
 
   columns: number;
 
