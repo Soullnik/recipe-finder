@@ -1,16 +1,43 @@
-class Component {
-  parent: any;
+interface ComponentProps {
+  tagName: string;
+  className?: string[];
+  src?: string;
+}
 
-  constructor(tagName: string, className: string | string[], src?: string) {
-    this.parent = document.createElement(tagName);
-    this.parent.classList.add(className);
-    if (src) {
-      this.parent.src = src;
+class Component {
+  private template: HTMLElement | HTMLImageElement;
+
+  constructor(props: ComponentProps) {
+    this.template = document.createElement(props.tagName);
+    if (props.className) {
+      this.template.classList.add(...props.className);
+    }
+    if (props.src && this.isImageElement(this.template)) {
+      this.template.src = props.src;
     }
   }
 
-  getElement() {
-    return this.parent;
+  private isImageElement(
+    template: HTMLElement | HTMLImageElement
+  ): template is HTMLImageElement {
+    return template.tagName === 'img';
+  }
+
+  public getElement() {
+    return this.template;
+  }
+
+  public append(child: HTMLElement[]) {
+    this.template.append(...child);
+  }
+
+  public addEvent(
+    eventName: string,
+    callback: (event: Event, template: HTMLElement) => void
+  ) {
+    this.template.addEventListener(eventName, (event: Event) =>
+      callback(event, this.template)
+    );
   }
 }
 

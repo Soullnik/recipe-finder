@@ -1,3 +1,4 @@
+import Component from '../../util/core';
 import './switch-button.scss';
 
 const getSwitchButton = () => {
@@ -19,3 +20,25 @@ const getSwitchButton = () => {
 };
 
 export default getSwitchButton;
+
+export class SwitchButton extends Component {
+  constructor() {
+    super({
+      tagName: 'div',
+      className: ['toggle'],
+    });
+    const btn = new Component({
+      tagName: 'div',
+      className: ['toggle-button'],
+    });
+    const ok = new Component({
+      tagName: 'div',
+      className: ['ok'],
+    });
+    btn.append([ok.getElement()]);
+    this.append([btn.getElement()]);
+    this.addEvent('click', (event, template) => {
+      template.classList.toggle('active');
+    });
+  }
+}

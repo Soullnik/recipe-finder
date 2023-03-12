@@ -5,8 +5,8 @@ export class Dropdown extends Component {
   count: HTMLElement;
 
   constructor(private userService: UserService) {
-    super('button', 'dropdown');
-    this.parent.addEventListener('click', () => {
+    super({ tagName: 'button', className: ['dropdown'] });
+    this.addEvent('click', () => {
       const selectList = document.querySelector('.select__list');
       selectList?.classList.toggle('hidden');
     });
@@ -17,23 +17,26 @@ export class Dropdown extends Component {
   }
 
   createDropDown() {
-    this.parent.append(
-      new Component('img', 'dropdown__burger', 'введите src').getElement(),
-      new Component(
-        'img',
-        'dropdown__avatar',
-        this.userService.getAvatar()
-      ).getElement(),
-      this.count
-    );
+    this.append([
+      new Component({
+        tagName: 'img',
+        className: ['dropdown__burger'],
+        src: 'введите src',
+      }).getElement(),
+      new Component({
+        tagName: 'img',
+        className: ['dropdown__avatar'],
+        src: this.userService.getAvatar(),
+      }).getElement(),
+      this.count,
+    ]);
   }
 }
 export class Select extends Component {
   listItems: HTMLElement[];
 
   constructor(arr: string[]) {
-    super('ul', 'select__list');
-    this.parent.classList.add('hidden');
+    super({ tagName: 'ul', className: ['select__list', 'hidden'] });
     this.listItems = arr.map((item) => {
       const li = document.createElement('li');
       li.classList.add('select__item');
@@ -47,6 +50,6 @@ export class Select extends Component {
   }
 
   createSelect() {
-    this.parent.append(...this.listItems);
+    this.append(this.listItems);
   }
 }

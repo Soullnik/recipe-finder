@@ -2,7 +2,9 @@ import {
   Dropdown,
   Select,
 } from './components/dropdown menu/dropdown-menu-class';
-import getSwitchButton from './components/switch-buttom/switch-button';
+import getSwitchButton, {
+  SwitchButton,
+} from './components/switch-buttom/switch-button';
 import СheckBox from './components/checkbox/checkbox';
 import Input from './components/input/input';
 import userService from './services/user.service';
@@ -21,11 +23,12 @@ const App = () => {
     'Помощь',
     'Выйти',
   ]);
+  const switchButton = new SwitchButton();
   if (root) {
     input1.create(root);
     input2.create(root, 'Необязательно');
     checkbox.create(root);
-    root.append(getSwitchButton());
+    root.append(switchButton.getElement());
     // input1.focus();
   }
   root?.append(dropDown.getElement(), select.getElement());
