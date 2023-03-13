@@ -1,0 +1,30 @@
+.increment-component{
+display: flex;
+gap: 5px;
+align-items: center;
+padding: 10px;
+}
+.counter{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 100px;
+}
+
+
+.button__reduce{
+    background: url(../../assets/icons/icons8-минус-50.png) center
+    center/cover no-repeat;
+    width: 40px;
+    height: 40px; 
+    border: none;
+}
+.button__increase{
+    background: url(../../assets/icons/icons8-плюс-50.png) center center/cover no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+.button__reduce.hidden-button{
+    visibility: hidden;
+    }
